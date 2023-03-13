@@ -2,20 +2,21 @@
 # 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
 # Найдите сумму всех четных элементов ряда Фибоначчи, которые не превышают четыре миллиона.
 
-x=0
-y=1
-z=0
-total=0
-fiboList=[0]
-while (y or x) <4000000:
-    if z%2==0:
-       total=total+z
-    x=y
-    y=z
-    fiboList.append(z)
-    z=x+y
-print("\n",total)
-print("\n","Список чисел Фиббоначи:")
-print(fiboList,"\n")
-    
+total = 0
+fibo_list = [ 0, 1 ]
+limit = 4 * 10 ** 6
 
+
+while True:
+    _tmp = fibo_list[len(fibo_list) - 1] + fibo_list[len(fibo_list) - 2] 
+    
+    if  _tmp > limit:
+            break
+
+    if _tmp % 2 == 0:
+        total += _tmp 
+
+    fibo_list.append(_tmp)
+
+print(total)
+print("\n","Список чисел Фиббоначи:", fibo_list)
