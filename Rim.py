@@ -38,11 +38,13 @@ decimal = number // 10**(pow - 1)
 
 decoding(decimal, pow)
 
-if number<=3000:
+if number>=1000 and number<=3000:
     print("M")
+elif number>3000 and number<5000:
+    print("MU")
 elif number>4999:
     print("UV")
-print("MU")
+
     
 
  
