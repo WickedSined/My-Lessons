@@ -55,6 +55,7 @@ for i in range(digree,0,-1):
       print("i=    "+str(i))
       print("Степень  "+str(digree))
 
+#  Создаем цикл для отработки каждого элемента списка в функции Конструктор
 # while num>0:
 #     dec=num%10
 #     spisok_digits.insert(0,dec)
@@ -64,12 +65,7 @@ for i in range(digree,0,-1):
 
     # number -= decimal * 10**(i - 1) 
 
-#  Создаем цикл для отработки каждого элемента списка в функции Конструктор
-
-
 print("Представление введенного числа списком: "+str(str_build))
-# decoding(digree,spisok_digits)
-
 
 
 
