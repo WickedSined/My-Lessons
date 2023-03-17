@@ -6,15 +6,11 @@ def decoding(x,digree):
     if digree==1:
         build_str = constructor(x,["I","V","X"])
         
-            # return str_build
-
     elif digree==2:
         build_str = constructor(x,["X","L","C"])
-            # return str_build
-            
+           
     elif digree==3:
         build_str = constructor(x,["C","D","M"])
-            # return str_build
             
     elif digree==4:
         build_str = constructor(x,["M","**","&&"])
@@ -51,17 +47,22 @@ print("Разрядность числа: "+str(digree))
 # Создаем список из разрядов числа: range(digree,0,-1):
 x=0
 str_build = ""
-for i in range(1,digree+1):
-      x=num%10
+for i in range(digree,0,-1):
+      x=num // 10**(i-1)
       str_build += decoding(x, i)
-      num=num//10
+      num=num-x*10**(i-1)
       print("Число в разряде    "+str(x))
       print("i=    "+str(i))
       print("Степень  "+str(digree))
+
 # while num>0:
 #     dec=num%10
 #     spisok_digits.insert(0,dec)
 #     num=num//10
+# decimal = number // 10**(i - 1)
+    # str_build += decoding(decimal, i)
+
+    # number -= decimal * 10**(i - 1) 
 
 #  Создаем цикл для отработки каждого элемента списка в функции Конструктор
 
