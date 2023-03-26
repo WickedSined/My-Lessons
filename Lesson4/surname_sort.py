@@ -1,5 +1,5 @@
 user_list=['Мудрик','Апостол','Грубый','Виницкий','','Марик','Бондарь','Синицкий','','Пуня','Паланский','Питкин','']
-
+sorted_list=[]
 # Блок удаления пустых значений в списке
 for item in user_list:
     if item == '':
@@ -38,12 +38,17 @@ def find_surname(work_list, surname):
     if surname == work_list[middle_index]:
         return surname
     elif surname < work_list[middle_index]:
-        new_list = work_list[middle_index + 1:]
-        return find_surname(new_list, surname)
-    else:
         new_list = work_list[:middle_index]
         return find_surname(new_list, surname)
+    elif surname > work_list[middle_index]:
+        new_list = work_list[middle_index+1:]
+        return find_surname(new_list, surname)
+    
+    # else:
+    #     new_list = work_list[:middle_index]
+    #     return find_surname(new_list, surname)
 
 
-name_sur = 'Мудрик'
-print(find_surname(user_list,name_sur))
+name_sur = 'Пуня'
+sorted_list = sort_list(user_list)
+print(find_surname(sorted_list,name_sur))

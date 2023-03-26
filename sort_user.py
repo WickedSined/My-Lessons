@@ -1,5 +1,5 @@
 user_list=[5,2,9,-10,200,5,0,-2,7,6,4,5]
-
+print(user_list)
 
 def sort_list(spisok):
     less = []
