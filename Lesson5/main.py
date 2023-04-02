@@ -2,8 +2,9 @@ import math
 from geopy.distance import geodesic
 
 cd = (
-    "Odessa", "1 200 000",  (30.716399437514013, 46.48625848852711),
-    "Kiyv", "4 000 000", (30.51489320418375,50.44588846103565),
+    "Odessa", "1 200 000",  (46.474548, 30.720019),
+    "Kiyv", "4 000 000", (50.44588846103565, 30.51489320418375),
+    "Kharkiv","",(49.998038, 36.263845)
     )
 city, population, coordinates = cd[0:3]
 
@@ -26,4 +27,4 @@ point1 = list(cd[2])
 point2 = list(cd[5])
 result_dist2 = geodesic(point1, point2).km
 
-print(f"Используя спецификацию языка:  {result_dist2:.2f} километров")
+print(f"Используя спецификацию языка, расстояние от {cd[0]} до {cd[3]}:  {result_dist2:.2f} километров")
